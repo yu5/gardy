@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @schedule.id %>
+</p>
+
+<p>
+  <b>Kick date:</b>
+  <%= @schedule.kick_date %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @schedule.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @schedule.end_time %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @schedule.title %>
+</p>
+
+<p>
+  <b>Contents:</b>
+  <%= @schedule.contents %>
+</p>
+
+<p>
+  <b>Open flag:</b>
+  <%= @schedule.open_flag %>
+</p>
+
+<p>
+  <b>Register:</b>
+  <%= @schedule.register %>
+</p>
+
+
+<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
+<%= link_to 'Back', schedules_path %>

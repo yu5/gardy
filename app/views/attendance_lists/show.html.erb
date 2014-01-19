@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Id:</b>
+  <%= @attendance_list.id %>
+</p>
+
+<p>
+  <b>Schedule:</b>
+  <%= @attendance_list.schedule_id %>
+</p>
+
+<p>
+  <b>Member:</b>
+  <%= @attendance_list.member_id %>
+</p>
+
+<p>
+  <b>Status:</b>
+  <%= @attendance_list.status %>
+</p>
+
+<p>
+  <b>Comment:</b>
+  <%= @attendance_list.comment %>
+</p>
+
+
+<%= link_to 'Edit', edit_attendance_list_path(@attendance_list) %> |
+<%= link_to 'Back', attendance_lists_path %>

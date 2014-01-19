@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  schedule_id: 1
+  member_id: 1
+  status: 1
+  comment: MyString
+
+two:
+  id: 1
+  schedule_id: 1
+  member_id: 1
+  status: 1
+  comment: MyString

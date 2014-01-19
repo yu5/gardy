@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  kick_date: 2014-01-05
+  start_time: 2014-01-05 14:15:06
+  end_time: 2014-01-05 14:15:06
+  title: MyString
+  contents: MyText
+  open_flag: false
+  register: MyString
+
+two:
+  id: 1
+  kick_date: 2014-01-05
+  start_time: 2014-01-05 14:15:06
+  end_time: 2014-01-05 14:15:06
+  title: MyString
+  contents: MyText
+  open_flag: false
+  register: MyString

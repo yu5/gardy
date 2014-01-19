@@ -1,0 +1,26 @@
+<h1>Gardy 出欠表</h1>
+
+<table>
+  <tr>
+    <th>member</th>
+<% @schedules.each do |schedule| %>
+    <th><%= schedule.title %></th>
+<% end %>
+    <th>変更</th>
+  </tr>
+
+<% @attendance_lists.each do |attendance_list| %>
+  <tr>
+    <td>[<%= @attendance_list[0].number %>]<%= @attendance_list[0].name_ja %></td>
+  <% attendance_list.each do |list| %>
+    <td><%= list.status %><br /><%= (list.comment) %></td>
+  <% end %>
+    <td><td><%= link_to 'Edit', edit_attendance_list_path(attendance_list.pop.member_id) %></td></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<!--
+<%= link_to 'New Attendance list', new_attendance_list_path %>
+-->

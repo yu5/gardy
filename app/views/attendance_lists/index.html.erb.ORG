@@ -1,0 +1,31 @@
+<h1>Listing attendance_lists</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Schedule</th>
+    <th>Member</th>
+    <th>Status</th>
+    <th>Comment</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @attendance_lists.each do |attendance_list| %>
+  <tr>
+    <td><%= attendance_list.id %></td>
+    <td><%= attendance_list.schedule_id %></td>
+    <td><%= attendance_list.member_id %></td>
+    <td><%= attendance_list.status %></td>
+    <td><%= attendance_list.comment %></td>
+    <td><%= link_to 'Show', attendance_list %></td>
+    <td><%= link_to 'Edit', edit_attendance_list_path(attendance_list) %></td>
+    <td><%= link_to 'Destroy', attendance_list, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Attendance list', new_attendance_list_path %>

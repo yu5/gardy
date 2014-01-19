@@ -1,0 +1,483 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js" type="text/javascript"></script>
+<script>
+window.jQuery || document.write('<script src="/assets/gardy_jq.js"><\/script>')
+</script>
+<script src="/assets/gardy_main.js" type="text/javascript"></script>
+<script src="/assets/gardy_main2.js" type="text/javascript"></script>
+
+<div class='' id='s-content'>
+<div class='navigator' data-bind-page='visible: showNav()' id='header-container' style='display:none;'>
+<div class='container wide-container'>
+<div class='strikingly-nav-spacer'></div>
+<div class='sixteen columns header'>
+<div class='logo' data-component='image' data-name='logo' id='logo'>
+&nbsp;
+</div>
+<div class='nav' data-bind-page="css:{'no-power': !menu.components.power_button.hasContentOrIsEditMode() }">
+<ul>
+<span data-bind-page="template: {name:'navbarItemTemplate', foreach: slides}"></span>
+<span data-bind-page="template: {name:'navbarLinkTemplate', foreach: submenu.list}"></span>
+</ul>
+</div>
+<div class='power-container' data-bind-page='visible: menu.components.power_button.hasContentOrIsEditMode() '>
+<div class='power' data-component='image' data-image-size='64x64#' data-name='power_button' data-use-url='false' id='navbar-top-button'>
+<img alt="" src="/assets/miyrmwhhowkor0tnqufs.png" title="" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id='header-spacer'></div>
+<script id='navbarItemTemplate' type='text/x-jquery-tmpl'>
+<li data-bind='visible: components.slideSettings.show_nav'>
+<a data-bind='text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }'></a>
+</li>
+</script>
+<script id='navbarLinkTemplate' type='text/x-jquery-tmpl'>
+<li>
+<a data-bind='text:components.link.text, attr: { href: components.link.link_url(), target: components.link.target() }'></a>
+</li>
+</script>
+
+<ul class='slides'>
+<li class='selected slide'>
+<a class='section-anchor' data-scroll-name='#1'></a>
+<a class='section-name-anchor' data-section-name='FUTSAL CLUB GARDY'></a>
+<div class='wide image resize' data-bind="'className': background.selectedClassName, 'style': background.selectedStyleLazy(), 'css':{lazy:true, 'lazy-background':true}, 'attr': {'data-background': background.assetUrl()}">
+
+<div class='container'>
+<div class='sixteen columns'>
+<div class='spacer' style='height:10px'>&nbsp;</div>
+<div class='subtitle'>
+<span class='line hide' data-bind='visible:text1.value().length &gt; 0'></span>
+<div class='ib'><div data-component='text' data-name='text1' data-text-type='body'> <em>Official Website Since 2014</em> </div></div>
+<span class='line' data-bind='visible:text1.value().length &gt; 0'></span>
+</div>
+<div class='title big'><div data-component='text' data-name='text2' data-text-type='title'> FUTSAL CLUB GARDY </div></div>
+<br>
+<br>
+</div>
+</div>
+</div>
+
+
+</li>
+<li class='slide'>
+<a class='section-anchor' data-scroll-name='#2'></a>
+<a class='section-name-anchor' data-section-name='TEAM'></a>
+<div class='wide'>
+<div class='container'>
+<div class='row big'>
+<div class='twelve columns offset-two'>
+<div class='title center' data-bind='visible:title.hasContentOrIsEditMode()'>
+<div class='ib relative'>
+<span class='line-abs' data-bind='visible:title.hasContent()'></span>
+<div data-component='text' data-name='title' data-text-type='heading'> ABOUT TEAM </div>
+<span class='line-abs right' data-bind='visible:title.hasContent()'></span>
+</div>
+<span class='line fixed-show' data-bind='visible:title.hasContent()'></span>
+</div>
+<div class='title2 center'>
+  <div data-component='text' data-name='subtitle' data-text-type='body'> 千住で活動中のフットサル </div>
+</div>
+</div>
+</div>
+<div class="clients content repeatable-component" data-bind="template: {
+        foreach: clients.list,
+        name: &#x27;client_box&#x27;
+      }, sortableRepeatable: clients.list"></div>
+<noscript>
+<img alt="" src="/assets/tk3iqpldmof1rixfzdr3.jpg" title="" />
+<div data-component='text' data-name='title' data-text-type='heading'> ミズノフットサルプラザ千住 </div>
+<div data-component='text' data-name='subtitle' data-text-type='heading'> 120-0024 東京都足立区千住関屋町19-1 </div>
+<div data-component='text' data-name='location' data-text-type='heading'> www.mfpnet.com/senju/ </div>
+<div data-component='text' data-name='description' data-text-type='body'> iOnPoverty empowers Millenials with the information and resources they need to pursue careers with purpose. Kip helped drive up iOnPoverty's Twitter engagement by over 300 percent. </div>
+<img alt="" src="/assets/xif1bhfwu8eghuxdbso9.jpg" title="" />
+<div data-component='text' data-name='title' data-text-type='heading'> ミズノフットサルプラザ千住大橋 </div>
+<div data-component='text' data-name='subtitle' data-text-type='heading'> 120-0044 東京都足立区千住緑町1丁目1-24 </div>
+<div data-component='text' data-name='location' data-text-type='heading'> www.mfpnet.com/senju_ohashi/ </div>
+<div data-component='text' data-name='description' data-text-type='body'>Opportunity Collaboration brings together nonprofit leaders, social entrepreneurs, and social investors to move together towards poverty alleviation. With Kip's help, Opportunity Collaboration's Facebook reach grew by up to 700 percent.</div>
+</noscript>
+</div>
+</div>
+<script data-component='repeatable_item_template' id='client_box' type='text/x-jquery-tmpl'>
+<div class='row big repeatable' data-bind='sortableItem: $data, mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler'>
+
+<div class='two columns offset-one center' data-bind="css: {'five':components.image.hasContent(), 'eight offset-four': !(components.title.hasContentOrIsEditMode() || components.subtitle.hasContentOrIsEditMode() || components.location.hasContentOrIsEditMode() || components.description.hasContentOrIsEditMode())} ">
+<div data-component='image' data-name='components.image' data-use-url='true'>
+<a href='#'>
+<img alt="Transparent" src="" />
+</a>
+</div>
+</div>
+<div class='four columns' data-bind="css: {'nine':components.title.hasContent() || components.subtitle.hasContent() || components.location.hasContent() || components.description.hasContent() , 'ten':!components.image.hasContent()} ">
+<div class='half-offset-left'>
+<div class='div' data-bind='visible: components.title.hasContentOrIsEditMode() '>
+<div class='subtitle' data-component='text' data-name='components.title' data-text-type='heading' data-use-font='true'></div>
+</div>
+<div class='div' data-bind='visible: components.subtitle.hasContentOrIsEditMode() '>
+<div class='text2' data-component='text' data-name='components.subtitle' data-use-font='true'></div>
+</div>
+<div class='div' data-bind='visible: components.location.hasContentOrIsEditMode() '>
+<div class='text3' data-component='text' data-name='components.location' data-use-font='true'></div>
+</div>
+<div class='text' data-component='text' data-name='components.description' data-use-font='true'></div>
+</div>
+</div>
+</div>
+</script>
+</li>
+
+<li class='slide'>
+<a class='section-anchor' data-scroll-name='#3'></a>
+<a class='section-name-anchor' data-section-name='SCHEDULE'></a>
+<div class='wide gray'>
+<div class='container'>
+<div class='row big'>
+<div class='twelve columns offset-two'>
+<div class='title center' data-bind='visible:title.hasContentOrIsEditMode()'>
+<div class='ib relative'>
+<span class='line-abs' data-bind='visible:title.hasContent()'></span>
+<div data-component='text' data-name='title' data-text-type='heading'> SCHEDULE </div>
+<span class='line-abs right' data-bind='visible:title.hasContent()'></span>
+</div>
+<span class='line fixed-show' data-bind='visible:title.hasContent()'></span>
+</div>
+<div class='title2 center'>
+<div data-component='text' data-name='subtitle' data-text-type='body'> 最近の活動状況 </div></div>
+<%= render 'schedules/list' %>
+</div>
+</div>
+<div class='row' data-bind='visible: image.hasContentOrIsEditMode() '>
+<div class='fourteen columns offset-one center'>
+<div class="image content"><div class='content'>
+<div class='video-content' data-bind='visible: image.showVideo()' style='display:none;'>
+<div class='player' data-bind='html: image.video.html'>
+
+</div>
+</div>
+<div class='image-content' data-bind='visible: image.showImage()' style='display:none;'>
+<a class='image-link' data-bind='attr: {href: image.image.link(), target: image.image.target() }'>
+<img alt="" data-bind="attr: { &#x27;class&#x27;: &#x27;lazy lazy-img&#x27;, &#x27;data-original&#x27;: image.image.assetUrl, alt: image.image.caption, title: image.image.caption }" src="" />
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class='row big'>
+<div class='sixteen columns center'>
+<div class='image-row center'>
+<div class="news content repeatable-component" data-bind="template: {
+        foreach: news.list,
+        name: &#x27;news_box&#x27;
+      }, sortableRepeatable: news.list"></div><noscript></noscript>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script data-component='repeatable_item_template' id='news_box' type='text/x-jquery-tmpl'>
+<div class='repeatable no-float middle pad' data-bind='sortableItem: $data, mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler'>
+
+<div data-component='image' data-name='components.image' data-use-url='true'>
+<img alt="Transparent" src="" />
+</div>
+</div>
+</script>
+</li>
+
+<li class='slide'>
+<a class='section-anchor' data-scroll-name='#4'></a>
+<a class='section-name-anchor' data-section-name='MEMBER'></a>
+<div class='wide'>
+<div class='container'>
+<div class='row big'>
+<div class='twelve columns offset-two'>
+<div class='title center' data-bind='visible:title.hasContentOrIsEditMode()'>
+<div class='ib relative'>
+<span class='line-abs' data-bind='visible:title.hasContent()'></span>
+<div data-component='text' data-name='title' data-text-type='heading'> MEMBER </div>
+<span class='line-abs right' data-bind='visible:title.hasContent()'></span>
+</div>
+<span class='line fixed-show' data-bind='visible:title.hasContent()'></span>
+</div>
+</div>
+</div>
+<div class='center'>
+<div class="teamMembers content repeatable-component" data-bind="template: {
+        foreach: teamMembers.list,
+        name: &#x27;member_box&#x27;
+      }, sortableRepeatable: teamMembers.list"></div>
+<noscript>
+<img alt="" src="" title="" />
+<div data-component='text' data-name='name' data-text-type='heading'>Patrick Ip</div>
+<div data-component='text' data-name='title' data-text-type='heading'>Chief Coffee Officer</div>
+<div data-component='text' data-name='description' data-text-type='body'>Hello</div>
+<img alt="" src="" title="" />
+<div data-component='text' data-name='name' data-text-type='heading'>Patrick Ip</div>
+<div data-component='text' data-name='title' data-text-type='heading'>Chief Coffee Officer</div>
+<div data-component='text' data-name='description' data-text-type='body'>Hello</div>
+</noscript>
+</div>
+</div>
+</div>
+<script data-component='repeatable_item_template' id='member_box' type='text/x-jquery-tmpl'>
+<div class='no-float mb30 repeatable' data-bind='sortableItem: $data, mouseenter: mouseenterHandler, mouseleave: mouseleaveHandler'>
+
+<div class='one column squeeze'>&nbsp;</div>
+<div class='five columns center'>
+<div class='imagecover' data-bind='visible: components.image.hasContentOrIsEditMode() '>
+<div data-component='image' data-image-size='280x280#' data-name='components.image' data-use-url='true'>
+<img alt="Transparent" src="" />
+</div>
+</div>
+<div class='subtitle' data-component='text' data-name='components.name' data-text-type='heading' data-use-font='true'></div>
+<div class='text3' data-component='text' data-name='components.title' data-use-font='true'></div>
+<div class='text' data-component='text' data-name='components.description' data-use-font='true'></div>
+</div>
+<div class='one column squeeze'>&nbsp;</div>
+</div>
+</script>
+</li>
+
+<li class='slide'>
+<a class='section-anchor' data-scroll-name='#5'></a>
+<a class='section-name-anchor' data-section-name='CONTACT'></a>
+<div class='wide gray'>
+<div class='container'>
+<div class='row big'>
+<div class='ten columns offset-three'>
+<div class='title center' data-bind='visible:title.hasContentOrIsEditMode()'>
+<div class='ib relative'>
+<span class='line-abs' data-bind='visible:title.hasContent()'></span>
+<div data-component='text' data-name='title' data-text-type='heading'> CONTACT </div>
+<span class='line-abs right' data-bind='visible:title.hasContent()'></span>
+</div>
+<span class='line fixed-show' data-bind='visible:title.hasContent()'></span>
+</div>
+<div class='title2 center'><div data-component='text' data-name='subtitle' data-text-type='body'> メンバー募集お問い合わせはこちらから </div></div>
+</div>
+</div>
+<div class='sixteen columns'>
+<div class='center'>
+<div class="email content">
+<form accept-charset="UTF-8" action="/site110797-9947-810/collected_emails.jsm" class="new_collected_email" id="new_collected_email" method="post">
+<div style="margin:0;padding:0;display:inline">
+<input name="utf8" type="hidden" value="&#x2713;" /></div>
+<div class='inputs' data-bind="template: { name: 'emailFormTemplate', data: email}"></div>
+<input data-bind="value:email.recipient" id="collected_email_recipient" name="collected_email[recipient]" type="hidden" />
+<input data-bind="value:email.hide_email" id="collected_email_skip_email" name="collected_email[skip_email]" type="hidden" value="true" />
+<input data-bind="value:email.hide_name" id="collected_email_skip_name" name="collected_email[skip_name]" type="hidden" value="true" />
+</form>
+
+</div></div>
+</div>
+</div>
+</div>
+<script id='emailFormTemplate' type='text/x-jquery-tmpl'>
+<!-- you can use the following methods -->
+<!-- isNameEmpty() -->
+<!-- isEmailInvalid() -->
+<!-- isSuccess() -->
+<!-- isError() -->
+<div class='text' data-bind='visible: !isSuccess()'>
+<div class='email-form'>
+<div class='input' data-bind='visible: hasNameBox()'>
+<label data-bind='text: name_label' for='collected_email[name]'>
+Name
+</label>
+<input name='collected_email[name]'>
+<div class='hint' data-bind='visible: isNameEmpty()'>
+Enter your name please
+</div>
+</div>
+<div class='input' data-bind='visible: hasEmailBox()'>
+<label data-bind='text: email_label' for='collected_email[email]'>
+Email
+</label>
+<input name='collected_email[email]'>
+<div class='hint' data-bind='visible: isEmailInvalid()'>
+Invalid email
+</div>
+</div>
+<div class='input' data-bind='visible: hasMessageBox()'>
+<label data-bind='text: message_label' for='collected_email[comment]'>
+Message
+</label>
+<textarea name='collected_email[comment]'></textarea>
+</div>
+</div>
+</div>
+<div class='center' data-bind='visible: !isSuccess()'>
+<br>
+<br>
+<a class='button' data-bind='text: submit_label, mouseclick: submit' for='collected_email[comment]'>Submit</a>
+<br>
+</div>
+<div class='center text' data-bind='visible: isSuccess(), text: thanksMessage'>
+<div class='hint s-form-submit-message'>Thanks for your message!</div>
+</div>
+</script>
+</li>
+
+<li class='slide'>
+<a class='section-anchor' data-scroll-name='#6'></a>
+<a class='section-name-anchor' data-section-name='LOGIN'></a>
+<div class='wide'>
+<div class='container'>
+<div class='row big'>
+<div class='ten columns offset-three'>
+<div class='title center' data-bind='visible:title.hasContentOrIsEditMode()'>
+<div class='ib relative'>
+<span class='line-abs' data-bind='visible:title.hasContent()'></span>
+<div data-component='text' data-name='title' data-text-type='heading'> LOGIN </div>
+<span class='line-abs right' data-bind='visible:title.hasContent()'></span>
+</div>
+<span class='line fixed-show' data-bind='visible:title.hasContent()'></span>
+</div>
+<div>
+<div class='title2 center'>
+  <div data-component='text' data-name='subtitle' data-text-type='body'>
+  </div>
+<% if member_signed_in? %>
+You are Already Logged in.
+<% else %>
+<%= render 'devise/sessions/new' %>
+<% end %>
+</div>
+
+</div>
+</div>
+</div>
+<div class='center s-mh s-contact-listing'>
+<div class="socialMedia content repeatable-component" data-bind="template: {
+        foreach: socialMedia.list,
+        name: &#x27;contact_box&#x27;
+      }, sortableRepeatable: socialMedia.list"></div><noscript></noscript>
+</div>
+</div>
+</div>
+
+
+</li>
+</ul>
+<div class='widecontainer' data-bind-page='visible:showFooter' id='footer-container'>
+<div class='container' id='footer'>
+<div id='footer-social-media'>
+<br>
+<div class="socialMedia content"><div class='social-media-display'>
+<ul class='links' data-bind="template: {name:'socialMediaLinks', foreach: socialMedia.link_list }" style='clear:both;'></ul>
+<ul class='buttons' data-bind='html: socialMedia.mediaListHtml'></ul>
+</div>
+</div>
+</div>
+<div id='footer-text'>
+<div data-component='text' data-name='copyright' data-text-type='body'>Copyright 2014</div>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class='navigation-buttons strikingly-fixed' data-bind-page='visible: showNavigationButtons()'>
+<span class='prev' data-bind-page='fadeVisible: !window.slide_navigator.isFirst(), mouseclick: window.slide_navigator.prev' title='Previous Section'></span>
+<span class='next' data-bind-page='fadeVisible: !window.slide_navigator.isLast(), mouseclick: window.slide_navigator.next' title='Next Section'></span>
+</div>
+
+</div>
+
+<!-- ==================== -->
+<!-- = Content Partials = -->
+<!-- ==================== -->
+<script id='textContent-partial' type='text/x-underscore-tmpl'>
+{{ if (useFont) {  }}
+<div class='content content2' data-bind="visible: !({{=name}}.isState('editor') || !{{=name}}.hasContent()), htmlValue: {{=name}}.value, style: (window.edit_page.data.{{=textType}}() != '') ? {fontFamily: window.edit_page.data.{{=textType}} } : {fontFamily: 'inherit' }">
+{{=content}}
+</div>
+{{ } else { }}
+<div class='content content2' data-bind="visible: !({{=name}}.isState('editor') || !{{=name}}.hasContent()), htmlValue: {{=name}}.value">
+{{=content}}
+</div>
+{{ } }}
+</script>
+<script id='imageContent-partial' type='text/x-underscore-tmpl'>
+<div class='content content2' data-bind="fadeVisibleAndHide: !{{=name}}.isState('editor')">
+{{ if (useUrl) {  }}
+<a class='image-link' data-bind='attr: {href: {{=name}}.link(), target: {{=name}}.target() }'>
+<img alt="Transparent" data-bind="attr: { &#x27;class&#x27;: &#x27;lazy lazy-img&#x27;, &#x27;data-original&#x27;: {{=name}}.assetUrl, alt: {{=name}}.caption, title: {{=name}}.caption }" src="" />
+</a>
+{{ } else { }}
+<img alt="Transparent" data-bind="attr: { &#x27;class&#x27;: &#x27;lazy lazy-img&#x27;, &#x27;data-original&#x27;: {{=name}}.assetUrl, alt: {{=name}}.caption, title: {{=name}}.caption }" src="" />
+{{ } }}
+</div>
+</script>
+
+<div class='navbar-drawer strikingly-drawer hidden'>
+<ul id='nav-drawer-list'>
+<span data-bind-page="template: {name:'strikinglyNavbarTouchItemTemplate', foreach: slides}"></span>
+<span data-bind-page="template: {name:'strikinglyNavbarTouchLinkTemplate', foreach: submenu.list}"></span>
+<li class='logo' data-bind-page='visible: showStrikinglyLogo' id='strikingly-footer-logo'>
+</li>
+</ul>
+</div>
+<div class='navbar-drawer-bar hidden'>
+<div class='drawer-container'>
+<a class='navbar' href='javascript:void(0);' onclick='Bobcat.TH.toggleDrawer(); return false;'>
+<div class='menu-icon'></div>
+</a>
+<div class='navbar-drawer-title-container'>
+</div>
+</div>
+</div>
+<script id='strikinglyNavbarTouchItemTemplate' type='text/x-jquery-tmpl'>
+<li data-bind='visible: components.slideSettings.show_nav'>
+<a data-bind='text:components.slideSettings.name, css: {selected: isHighlighted()}, attr: { href: hashHref() }, mouseclick: Bobcat.TH.toggleDrawer '></a>
+</li>
+</script>
+<script id='strikinglyNavbarTouchLinkTemplate' type='text/x-jquery-tmpl'>
+<li>
+<a data-bind='text:components.link.text, attr: { href: components.link.link_url(), target: components.link.target() }'></a>
+</li>
+</script>
+
+<div id='fb-root'></div>
+<script type='text/javascript'>
+data = {"type":"PageData","id":null,"horizontal":false,"showNav":true,"navFont":"","titleFont":"","logoFont":"","bodyFont":"","headingFont":"","fixedSocialMedia":false,"showButtons":true,"slides":[{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_slogan","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"FUTSAL CLUB GARDY","show_nav":false,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"/assets/tcmdyo5zz1e8dy9vitl2.jpg","url":"/assets/tcmdyo5zz1e8dy9vitl2.jpg","original_url":"/assets/tcmdyo5zz1e8dy9vitl2.jpg","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"text1":{"type":"RichText","id":null,"value":"<div><em>Official Website Since 2014</em></div>","text_type":"body"},"text2":{"type":"RichText","id":null,"value":"<div>FUTSAL CLUB GARDY</div>","text_type":"heading"}}},{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_what_we_do","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"TEAM","show_nav":true,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"","url":"/assets/defaults/background2.jpg","original_url":"/assets/defaults/background2.jpg","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"title":{"type":"RichText","id":null,"value":"<div>ABOUT TEAM</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"<div>\u5343\u4f4f\u3067\u6d3b\u52d5\u4e2d\u306e\u30d5\u30c3\u30c8\u30b5\u30eb\u30c1\u30fc\u30e0\u3067\u3059</div>","text_type":"body"},"clients":{"type":"Repeatable","id":null,"list":[{"type":"RepeatableItem","id":null,"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"/assets/tk3iqpldmof1rixfzdr3.jpg","url":"/assets/tk3iqpldmof1rixfzdr3.jpg","original_url":"/assets/tk3iqpldmof1rixfzdr3.jpg","image_type":"large","caption":"","description":"","new_target":true},"title":{"type":"RichText","id":null,"value":"<div>\u30df\u30ba\u30ce\u30d5\u30c3\u30c8\u30b5\u30eb\u30d7\u30e9\u30b6\u5343\u4f4f</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"<div>120-0024 東京都足立区千住関屋町19-1</div>","text_type":"heading"},"location":{"type":"RichText","id":null,"value":"<div>www.mfpnet.com/senju/</div>","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"<div>iOnPoverty empowers Millenials with the information and resources they need to pursue careers with purpose. Kip helped drive up iOnPoverty's Twitter engagement by over 300 percent.</div>","text_type":"body"}}},{"type":"RepeatableItem","id":null,"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"/assets/xif1bhfwu8eghuxdbso9.jpg","url":"/assets/xif1bhfwu8eghuxdbso9.jpg","original_url":"/assets/xif1bhfwu8eghuxdbso9.jpg","image_type":"medium","caption":"","description":"","new_target":true},"title":{"type":"RichText","id":null,"value":"<div>\u30df\u30ba\u30ce\u30d5\u30c3\u30c8\u30b5\u30eb\u30d7\u30e9\u30b6\u5343\u4f4f\u5927\u6a4b</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"120-0044 東京都足立区千住緑町1丁目1-24","text_type":"heading"},"location":{"type":"RichText","id":null,"value":"www.mfpnet.com/senju_ohashi/","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"Opportunity Collaboration brings together nonprofit leaders, social entrepreneurs, and social investors to move together towards poverty alleviation. With Kip's help, Opportunity Collaboration's Facebook reach grew by up to 700 percent.","text_type":"body"}}}],"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/logo3.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":true},"title":{"type":"RichText","id":null,"value":"Opportunity Collaboration","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"120-0044 東京都足立区千住緑町1丁目1-24","text_type":"heading"},"location":{"type":"RichText","id":null,"value":"www.mfpnet.com/senju_ohashi/","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"Opportunity Collaboration brings together nonprofit leaders, social entrepreneurs, and social investors to move together towards poverty alleviation. With Kip's help, Opportunity Collaboration's Facebook reach grew by up to 700 percent.","text_type":"body"}}}}},{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_press","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"SCHEDULE","show_nav":true,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"","url":"/assets/defaults/background2.jpg","original_url":"/assets/defaults/background2.jpg","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"title":{"type":"RichText","id":null,"value":"<div>SCHEDULE</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"<div>\u6d3b\u52d5\u30ab\u30ec\u30f3\u30c0\u30fc\u306e\u305b\u307e\u3059</div>","text_type":"body"},"image":{"type":"Media","id":null,"video":{"type":"Video","id":null,"html":"","url":"","maxwidth":700},"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/inc.png","original_url":"/assets/inc.png","image_type":"large","caption":"","description":"","new_target":true},"current":"video"},"news":{"type":"Repeatable","id":null,"list":[],"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/small-nbc-color.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":null}}}}},{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_who_we_are","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"MEMBER","show_nav":true,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"","url":"/assets/defaults/background2.jpg","original_url":"/assets/defaults/background2.jpg","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"title":{"type":"RichText","id":null,"value":"<div>MEMBER</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit","text_type":"body"},"teamMembers":{"type":"Repeatable","id":null,"list":[{"type":"RepeatableItem","id":null,"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/pip.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":true},"name":{"type":"RichText","id":null,"value":"Patrick Ip","text_type":"heading"},"title":{"type":"RichText","id":null,"value":"Chief Coffee Officer","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"Hello","text_type":"body"}}},{"type":"RepeatableItem","id":null,"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/pip.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":true},"name":{"type":"RichText","id":null,"value":"Patrick Ip","text_type":"heading"},"title":{"type":"RichText","id":null,"value":"Chief Coffee Officer","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"Hello","text_type":"body"}}}],"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/pip.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":true},"name":{"type":"RichText","id":null,"value":"Patrick Ip","text_type":"heading"},"title":{"type":"RichText","id":null,"value":"Chief Coffee Officer","text_type":"heading"},"description":{"type":"RichText","id":null,"value":"Hello","text_type":"body"}}}}},{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_contact_form","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"CONTACT","show_nav":true,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"","url":"/assets/defaults/background.jpg","original_url":"","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"title":{"type":"RichText","id":null,"value":"<div>CONTACT</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"<div>\u30e1\u30f3\u30d0\u30fc\u52df\u96c6\u304a\u554f\u3044\u5408\u308f\u305b\u306f\u3053\u3061\u3089\u304b\u3089</div>","text_type":"body"},"email":{"type":"EmailForm","id":null,"hideMessageBox":false,"recipient":"","name_label":"Name","email_label":"Email","message_label":"Message","submit_label":"Submit","hide_name":false,"hide_email":false,"thanksMessage":"Thanks for your message!"}}},{"type":"Slide","id":null,"template_id":null,"template_name":"fresh_contact","components":{"slideSettings":{"type":"SlideSettings","id":null,"name":"LOGIN","show_nav":true,"sync_key":null},"background":{"type":"BackgroundImage","id":null,"link_url":"","thumb_url":"","url":"/assets/defaults/background2.jpg","original_url":"/assets/defaults/background2.jpg","image_type":"background","caption":"","description":"","new_target":true,"style":"cover","color":null,"opacity":0.3,"textStyles":[{"type":"TextStyle","displayName":"Light Text","colorCode":"#ffffff","className":"strikingly-light-text"},{"type":"TextStyle","displayName":"Dark Text","colorCode":"#222222","className":"strikingly-dark-text"}],"selectedClassName":"strikingly-light-text"},"title":{"type":"RichText","id":null,"value":"<div>LOGIN</div>","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"","text_type":"body"},"socialMedia":{"type":"Repeatable","id":null,"list":[],"components":{"image":{"type":"Image","id":null,"link_url":"","thumb_url":"","url":"/assets/fb-icon.png","original_url":"","image_type":"medium","caption":"","description":"","new_target":true},"title":{"type":"RichText","id":null,"value":"Title","text_type":"heading"},"subtitle":{"type":"RichText","id":null,"value":"Lorem ipsum dolor sit amet, consectetuer adipiscing elit","text_type":"body"}}}}}],"new_page":false,"showFooter":true,"theme":"fresh","menu":{"type":"Menu","id":null,"logo":null,"components":{"logo":{"type":"Image","id":null,"link_url":"","thumb_url":"/assets/transparent.png","url":"/assets/transparent.png","original_url":"http://strikingly-static-staging.s3.amazonaws.com/page/images/custom/198.png?1345075510","image_type":"large","caption":"FUTSAL CLUB GARDY","description":"","new_target":true},"power_button":{"type":"Image","id":null,"link_url":"#1","thumb_url":"/assets/miyrmwhhowkor0tnqufs.png","url":"/assets/miyrmwhhowkor0tnqufs.png","original_url":"/assets/miyrmwhhowkor0tnqufs.png","image_type":"small","caption":"","description":"","new_target":false}}},"footer":{"type":"Footer","id":null,"socialMedia":{"type":"SocialMediaList","id":null,"link_list":[],"button_list":[{"type":"Facebook","id":null,"url":"","link_url":"","share_text":null,"app_id":"247794892017801","show_button":false},{"type":"Twitter","id":null,"url":"","link_url":"","share_text":"Saw an awesome one pager. Check it out @SimplyStriking","show_button":false},{"type":"GPlus","id":null,"url":"","link_url":"","share_text":null,"show_button":false},{"type":"LinkedIn","id":null,"url":"","link_url":"","share_text":null,"show_button":false}]},"copyright":{"type":"RichText","value":"Copyright 2014"}},"showStrikinglyLogo":true,"submenu":{"type":"SubMenu","id":null,"list":[],"components":{"link":{"type":"Button","id":null,"text":"Blog","url":"http://www.wordpress.com","new_target":true}}},"showNavigationButtons":true,"templateVariation":"","templatePreset":"fresh"};
+</script>
+<script type='text/javascript'>
+  //<![CDATA[
+    (function() {
+  var old_$;
+
+  old_$ = $.noConflict(true);
+
+  if (!window.$) {
+    window.$ = window.jQuery = old_$;
+  }
+
+  $(function() {
+    var pageAnalyticsData, slide_navigator, social_media_config;
+    social_media_config = new Bobcat.SocialMediaConfig({
+    });
+    window.social_media_config = social_media_config;
+    slide_navigator = new Bobcat.Navigator();
+    window.slide_navigator = slide_navigator;
+    window.page_tranformers = new Bobcat.PageTransformer($('body'), false);
+    window.page_tranformers.transform();
+    window.edit_page = new Bobcat.ShowPage(data);
+    window.edit_page.init();
+    pageAnalyticsData = {
+    };
+    Bobcat.PageAE = new Bobcat.PageAnalyticsEngine(pageAnalyticsData, "source1");
+    if (!$('meta[name=mode]').attr('content')) {
+      Bobcat.PageAE.logPageView();
+      Bobcat.PageAE.startPing();
+    }
+    return $('input[name=authenticity_token]').val($('meta[name=csrf-token]').attr('content'));
+  });
+
+}).call(this);
+
+  //]]>
+</script>

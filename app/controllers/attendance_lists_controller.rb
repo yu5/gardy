@@ -1,3 +1,5 @@
+require 'constants'
+
 class AttendanceListsController < ApplicationController
 
   before_filter :authenticate_member!
@@ -6,17 +8,26 @@ class AttendanceListsController < ApplicationController
   # GET /attendance_lists.json
   def index
 
+    #@attendance_status = Array.new
+    #@attendance_status = Constants.attendance_status
+    #logger.debug(Constants.tet_stat)
+
     #@attendance_lists = AttendanceList.all
     @schedules = Schedule.get_active_schedule()
-    logger.debug(@schedules)
+    #logger.debug(@schedules)
 
     @attendance_lists = Array.new
-    @members = Member.where("status in (1,2)").order("id ASC").pluck(:id)
-    @members.each{|mem_id|
-      ## SELECT
-      @attendance_list = AttendanceList.get_member_schedule(mem_id)
+    @schedules.each{|schedule|
+      @attendance_list = AttendanceList.get_schedule_and_members(schedule.id)
       @attendance_lists << @attendance_list
-    }
+    } 
+
+    #@members = Member.where("status in (1,2)").order("id ASC").pluck(:id)
+    #@members.each{|mem_id|
+    #  ## SELECT
+    #  @attendance_list = AttendanceList.get_member_schedule(mem_id)
+    #  @attendance_lists << @attendance_list
+    #}
 
     logger.debug(@attendance_lists)
 #    @attendance_lists.each{|list|

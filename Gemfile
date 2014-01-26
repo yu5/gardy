@@ -41,6 +41,7 @@ gem 'jquery-rails'
 gem 'therubyracer', :platforms => :ruby
 gem 'execjs'
 gem 'devise'
+gem 'settingslogic'
 
 group :development do
   gem 'erb2haml'

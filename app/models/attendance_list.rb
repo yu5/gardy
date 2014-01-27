@@ -11,11 +11,6 @@ class AttendanceList < ActiveRecord::Base
     return AttendanceList.find_by_sql([sql, mem_id.to_s])
   end
 
-  def self.get_members(sche_id)
-    sql = "SELECT al.schedule_id,al.member_id,al.status,al.comment,m.number,m.name_ja FROM attendance_lists AS al INNER JOIN schedules AS s ON al.schedule_id = s.id LEFT JOIN members AS m ON al.member_id=m.id WHERE al.schedule_id = ? ORDER BY m.number"
-    return AttendanceList.find_by_sql([sql, sche_id.to_s])
-  end
-
   def self.get_schedule_and_members(schedule_id)
     sql = "SELECT s.*, al.member_id, al.status AS attendance_stat, al.comment AS attendance_come, m.number,m.name_ja FROM attendance_lists AS al INNER JOIN schedules AS s ON al.schedule_id = s.id LEFT JOIN members AS m ON al.member_id=m.id WHERE al.schedule_id = ? ORDER BY m.number;"
     return AttendanceList.find_by_sql([sql, schedule_id.to_s])

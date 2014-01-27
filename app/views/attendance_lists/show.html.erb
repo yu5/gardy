@@ -1,33 +1,38 @@
 <p id="notice"><%= notice %></p>
 
+<hr />
+<% @save_schedule_id="0" %>
+<% @attendance_list.each do |list| %>
+  <% if @save_schedule_id != list.id %>
 <p>
   <b>内容:</b>
-  <%= @attendance_list.title %>
+  <%= list.title %>
 </p>
 
 <p>
   <b>日時:</b>
-  <%= @attendance_list.kick_date.strftime("%Y/%m/%d") %> <%= list.start_time.strftime("%H:%M") %>-<%= list.end_time.strftime("%H:%M") %>
+  <%= list.kick_date.strftime("%Y/%m/%d") %> <%= list.start_time.strftime("%H:%M") %>-<%= list.end_time.strftime("%H:%M") %>
 </p>
 
 <p>
   <b>場所:</b>
-  <%= @attendance_list.place %>
+  <%= list.place %>
 </p>
 
 <p>
   <b>詳細:</b>
-  <%= @attendance_list.contents %>
+  <%= list.contents %>
 </p>
 
 <hr />
+<% end %>
+<% @save_schedule_id=list.id %>
 
 <ul>
-<% @attendance_list.each do |attendance| %>
-    <li><b>[<%= attendance.number %>]<%= attendance.name_ja %></b></li>
-    <li><%= @attendance_status[attendance.attendance_stat] %><br /><%= (attendance.attendance_come) %></le>
-<% end %>
+    <li><b>[<%= list.number %>]<%= list.name_ja %></b></li>
+    <li><%= @attendance_status[list.attendance_stat] %><br /><%= (list.attendance_come) %></le>
 </ul>
+<% end %>
 
 <%= link_to 'Edit', edit_attendance_list_path(@attendance_list) %> |
 <%= link_to 'Back', attendance_lists_path %>

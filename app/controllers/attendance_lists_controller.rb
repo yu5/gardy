@@ -35,8 +35,12 @@ class AttendanceListsController < ApplicationController
   # GET /attendance_lists/1
   # GET /attendance_lists/1.json
   def show
+
+    @attendance_status = Constants.attendance_status
+
     #@attendance_list = AttendanceList.find(params[:id])
-    @attendance_list = AttendanceList.get_members(sche_id)
+    @attendance_list = AttendanceList.get_schedule_and_members(params[:id])
+    logger.debug(@attendance_list)
 
     respond_to do |format|
       format.html # show.html.erb

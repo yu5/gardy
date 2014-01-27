@@ -26,7 +26,7 @@
   <table>
   <tr>
     <td>[<%= list.number %>]<%= list.name_ja %></td>
-    <td><%= list.attendance_stat %><br /><%= (list.attendance_come) %></td>
+    <td><%= @attendance_status[list.attendance_stat] %><br /><%= (list.attendance_come) %></td>
     <td><%= link_to 'Edit', edit_attendance_list_path(list.member_id) %></td>
   </tr>
   </table>

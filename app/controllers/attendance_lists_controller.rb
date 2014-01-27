@@ -1,5 +1,3 @@
-require 'constants'
-
 class AttendanceListsController < ApplicationController
 
   before_filter :authenticate_member!
@@ -9,8 +7,7 @@ class AttendanceListsController < ApplicationController
   def index
 
     #@attendance_status = Array.new
-    #@attendance_status = Constants.attendance_status
-    #logger.debug(Constants.tet_stat)
+    @attendance_status = Constants.attendance_status
 
     #@attendance_lists = AttendanceList.all
     @schedules = Schedule.get_active_schedule()

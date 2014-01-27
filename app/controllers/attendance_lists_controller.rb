@@ -6,7 +6,6 @@ class AttendanceListsController < ApplicationController
   # GET /attendance_lists.json
   def index
 
-    #@attendance_status = Array.new
     @attendance_status = Constants.attendance_status
 
     #@attendance_lists = AttendanceList.all
@@ -26,13 +25,6 @@ class AttendanceListsController < ApplicationController
     #  @attendance_lists << @attendance_list
     #}
 
-    logger.debug(@attendance_lists)
-#    @attendance_lists.each{|list|
-#      list.each{|list2|
-#        logger.debug(list2)
-#      }
-#    }
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @schedules }
@@ -43,7 +35,8 @@ class AttendanceListsController < ApplicationController
   # GET /attendance_lists/1
   # GET /attendance_lists/1.json
   def show
-    @attendance_list = AttendanceList.find(params[:id])
+    #@attendance_list = AttendanceList.find(params[:id])
+    @attendance_list = AttendanceList.get_members(sche_id)
 
     respond_to do |format|
       format.html # show.html.erb

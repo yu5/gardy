@@ -1,3 +1,22 @@
 // Place all the styles related to the members controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.simple_table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.simple_table th{
+    width: 25%;
+    padding: 6px;
+    text-align: left;
+    vertical-align: top;
+    color: #333;
+    background-color: #eee;
+    border: 1px solid #b9b9b9;
+}
+.simple_table td{
+    padding: 6px;
+    background-color: #fff;
+    border: 1px solid #b9b9b9;
+}

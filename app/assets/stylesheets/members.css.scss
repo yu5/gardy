@@ -4,14 +4,25 @@
 
 .page_title {
     margin-top: 30px;
-    margin-left: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
 }
 .list_main {
     width: 95%;
     margin-left: 10px;
     margin-right: 10px;
 }
+.list_main > a {
+    margin-left: 20px;
+    border: 1px #aaa double;
+    background: #FBDADE;
+}
 .entry_main {
+    width: 80%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.detail_main {
     width: 80%;
     margin-left: 10px;
     margin-right: 10px;

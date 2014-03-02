@@ -344,6 +344,8 @@ Message
   </div>
 <% if member_signed_in? %>
 You are Already Logged in.
+<%= link_to 'ログイン', new_member_session_path %>
+<%= link_to 'ログアウト', destroy_member_session_path %>
 <% else %>
 <%= render 'devise/sessions/new' %>
 <% end %>

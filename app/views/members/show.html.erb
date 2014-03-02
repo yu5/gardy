@@ -2,7 +2,7 @@
         <h2>A.C.GARDY Members Detail</h2>
 </div>
 
-<div class"detail_main">
+<div class="detail_main">
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -11,42 +11,42 @@
 </p>
 
 <p>
-  <b>Number:</b>
+  <b>Number (背番号):</b>
   <%= @member.number %>
 </p>
 
 <p>
-  <b>Name en:</b>
+  <b>Name en (名前：英語):</b>
   <%= @member.name_en %>
 </p>
 
 <p>
-  <b>Name ja:</b>
+  <b>Name ja (名前：漢字):</b>
   <%= @member.name_ja %>
 </p>
 
 <p>
-  <b>Name ja yomi:</b>
+  <b>Name ja yomi (名前：ひらがな):</b>
   <%= @member.name_ja_yomi %>
 </p>
 
 <p>
-  <b>Join date:</b>
+  <b>Join date (参加年月日):</b>
   <%= @member.join_date %>
 </p>
 
 <p>
-  <b>Comment:</b>
+  <b>Comment (メンバ説明):</b>
   <%= @member.comment %>
 </p>
 
 <p>
-  <b>Status:</b>
+  <b>Status (ステータス):</b>
   <%= @member.status %>
 </p>
 
 
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
+<%= link_to '編集', edit_member_path(@member) %> |
+<%= link_to '一覧へ戻る', members_path %>
 
 </div>

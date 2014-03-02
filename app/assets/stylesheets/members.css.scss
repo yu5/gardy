@@ -22,10 +22,23 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.entry_main > a {
+    margin-left: 20px;
+    border: 1px #aaa double;
+    background: #FBDADE;
+}
 .detail_main {
     width: 80%;
-    margin-left: 10px;
+    margin-left: 30px;
     margin-right: 10px;
+}
+.detail_main > a {
+    margin-left: 20px;
+    border: 1px #aaa double;
+    background: #FBDADE;
+}
+.detail_main > p {
+    margin-bottom: 5px;
 }
 .simple_table {
     margin-left: 20px;

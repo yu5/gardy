@@ -28,9 +28,9 @@
     <td><%= member.join_date %></td>
     <td><%= member.comment %></td>
     <td><%= member.status %></td>
-    <td><%= link_to 'Show', member %></td>
-    <td><%= link_to 'Edit', edit_member_path(member) %></td>
-    <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to '詳細', member %></td>
+    <td><%= link_to '編集', edit_member_path(member) %></td>
+    <td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>
   </tr>
 <% end %>
 </table>

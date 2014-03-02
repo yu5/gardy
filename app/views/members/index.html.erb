@@ -15,7 +15,7 @@
     <th>Status</th>
     <th></th>
     <th></th>
-    <th></th>
+    <!--<th></th>-->
   </tr>
 
 <% @members.each do |member| %>
@@ -30,7 +30,7 @@
     <td><%= member.status %></td>
     <td><%= link_to '詳細', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
-    <td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>
+    <!--<td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>-->
   </tr>
 <% end %>
 </table>

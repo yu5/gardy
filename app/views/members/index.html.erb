@@ -5,14 +5,16 @@
 <div class="list_main">
 <table class="simple_table">
   <tr>
-    <th>Id</th>
-    <th>Number</th>
-    <th>Name en</th>
-    <th>Name ja</th>
-    <th>Name ja yomi</th>
-    <th>Join date</th>
-    <th>Comment</th>
-    <th>Status</th>
+    <th>ID</th>
+    <th>Number<br />背番号</th>
+    <th>Name en<br />名前(英語)</th>
+    <th>Name ja<br />名前(漢字)</th>
+    <th>Name ja yomi<br />名前(ひらがな)</th>
+    <th>Email<br />ログインアドレス</th>
+    <th>Comment<br />メンバ説明</th>
+    <th>Status<br />ステータス</th>
+    <th>Join date<br />入会日</th>
+    <th>Current sign in at<br />最終ログイン日</th>
     <th></th>
     <th></th>
     <!--<th></th>-->
@@ -25,9 +27,11 @@
     <td><%= member.name_en %></td>
     <td><%= member.name_ja %></td>
     <td><%= member.name_ja_yomi %></td>
-    <td><%= member.join_date.strftime("%Y/%m/%d") %></td>
+    <td><%= member.email %></td>
     <td><%= member.comment %></td>
     <td><%= @member_status[member.status.to_i] %></td>
+    <td><%= member.join_date.strftime("%Y/%m/%d") %></td>
+    <td><%= member.current_sign_in_at.strftime("%Y/%m/%d %H:%M:%S") %></td>
     <td><%= link_to '詳細', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
     <!--<td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>-->

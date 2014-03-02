@@ -6,7 +6,7 @@ class MembersController < ApplicationController
   # GET /members.json
   def index
       @member_status = Constants.member_status
-      @members = Member.all
+      @members = Member.order('status ASC, number ASC')
 
     respond_to do |format|
       format.html # index.html.erb

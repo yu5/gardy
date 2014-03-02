@@ -31,8 +31,18 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+      width: 50%;
+      background: #EEE;
+      margin-bottom: 20px;
+      margin-left: 20px;
   }
+}
+
+input {
+    background: #FBDADE;
+    height: 20px;
+    width: 300px;
+    border: 2px #FF7F8F double;
 }
 
 #notice {

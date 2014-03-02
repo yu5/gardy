@@ -345,7 +345,7 @@ Message
 <% if member_signed_in? %>
 You are Already Logged in.
 <%= link_to 'ログイン', new_member_session_path %>
-<%= link_to 'ログアウト', destroy_member_session_path %>
+<%= link_to 'ログアウト', destroy_member_session_path, method: :delete %>
 <% else %>
 <%= render 'devise/sessions/new' %>
 <% end %>

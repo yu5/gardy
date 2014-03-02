@@ -3,6 +3,7 @@ defaults: &defaults
     min: 1
     max: 99
   attendance_status: ['未回答', '出席', '遅刻参加', '当日決定', '未定', '5', '6', '7', '8', '欠席']
+  member_status: ['0', 'ゴールド会員(正会員)', 'シルバー会員(準会員)', '3', '4', '5', '6', '7', '休部', '退会']
 
 development:
   <<: *defaults

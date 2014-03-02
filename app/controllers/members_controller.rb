@@ -5,7 +5,8 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+      @member_status = Constants.member_status
+      @members = Member.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -16,6 +17,7 @@ class MembersController < ApplicationController
   # GET /members/1
   # GET /members/1.json
   def show
+    @member_status = Constants.member_status
     @member = Member.find(params[:id])
 
     respond_to do |format|
@@ -37,13 +39,15 @@ class MembersController < ApplicationController
 
   # GET /members/1/edit
   def edit
+    @member_status = Constants.member_status
     @member = Member.find(params[:id])
   end
 
   # POST /members
   # POST /members.json
   def create
-    @member = Member.new(params[:member])
+      @member_status = Constants.member_status
+      @member = Member.new(params[:member])
 
     respond_to do |format|
       if @member.save
@@ -59,6 +63,7 @@ class MembersController < ApplicationController
   # PUT /members/1
   # PUT /members/1.json
   def update
+    @member_status = Constants.member_status
     @member = Member.find(params[:id])
 
     respond_to do |format|

@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :join_date %> (加入年月日)<br />
-    <%= f.datetime_select :join_date, :locale => 'en' %>
+    <%= f.date_select :join_date, :use_month_numbers => true, :locale => 'ja' %>
   </div>
   <div class="field">
     <%= f.label :comment %> (メンバ説明)<br />
@@ -37,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :status %> (ステータス)<br />
-    <%= f.number_field :status %>
+    <%= f.collection_select(:status, @member_status, :id, :status, :selected => :status) %>
   </div>
   <div class="actions">
     <%= f.submit %>

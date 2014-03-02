@@ -29,6 +29,7 @@ class MembersController < ApplicationController
   # GET /members/new
   # GET /members/new.json
   def new
+    @member_status = Constants.member_status
     @member = Member.new
 
     respond_to do |format|
@@ -80,6 +81,7 @@ class MembersController < ApplicationController
   # DELETE /members/1
   # DELETE /members/1.json
   def destroy
+    @member_status = Constants.member_status
     @member = Member.find(params[:id])
     @member.destroy
 

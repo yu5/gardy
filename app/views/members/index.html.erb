@@ -29,9 +29,21 @@
     <td><%= member.name_ja_yomi %></td>
     <td><%= member.email %></td>
     <td><%= member.comment %></td>
-    <td><%= @member_status[member.status.to_i] %></td>
-    <td><%= member.join_date.strftime("%Y/%m/%d") %></td>
-    <td><%= member.current_sign_in_at.strftime("%Y/%m/%d %H:%M:%S") %></td>
+    <% if member.status.nil? %>
+        <td>未登録</td>
+    <% else %>
+        <td><%= @member_status[member.status.to_i] %></td>
+    <% end %>
+    <% if member.join_date.nil? %>
+        <td>-</td>
+    <% else %>
+        <td><%= member.join_date.strftime("%Y/%m/%d") %></td>
+    <% end %>
+    <% if member.current_sign_in_at.nil? %>
+        <td>未ログイン</td>
+    <% else %>
+        <td><%= member.current_sign_in_at.strftime("%Y/%m/%d %H:%M:%S") %></td>
+    <% end %>
     <td><%= link_to '詳細', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
     <!--<td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>-->

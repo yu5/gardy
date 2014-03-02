@@ -36,8 +36,8 @@
     <%= f.text_area :comment %>
   </div>
   <div class="field">
-    <%= f.label :status %> (ステータス)<br />
-    <%= f.collection_select(:status, @member_status, :to_s, :to_s, include_blank: false) %>
+      <%= f.label :status %> (ステータス)<br />
+      <%= f.select(:status, options_for_select(Array[*@member_status.collect {|v,i| [v,@member_status.index(v)] }], :selected => f.object.status)) %>
   </div>
   <div class="actions">
     <%= f.submit %>

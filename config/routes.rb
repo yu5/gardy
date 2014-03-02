@@ -2,8 +2,8 @@ Gardy::Application.routes.draw do
 
   get "home/index"
 
-  #devise_for :members
-  devise_for :members, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'sign_up' }
+  devise_for :members
+  #devise_for :members, :path => "auth", :path_names => { :sign_in => 'login', :sign_out => 'logout', :password => 'secret', :confirmation => 'verification', :unlock => 'unblock', :registration => 'register', :sign_up => 'sign_up' }
 
   resources :members
   resources :schedules

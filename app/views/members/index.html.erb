@@ -25,7 +25,7 @@
     <td><%= member.name_en %></td>
     <td><%= member.name_ja %></td>
     <td><%= member.name_ja_yomi %></td>
-    <td><%= member.join_date %></td>
+    <td><%= member.join_date.strftime("%Y/%m/%d") %></td>
     <td><%= member.comment %></td>
     <td><%= @member_status[member.status.to_i] %></td>
     <td><%= link_to '詳細', member %></td>

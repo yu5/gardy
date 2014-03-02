@@ -27,7 +27,7 @@
     <td><%= member.name_ja_yomi %></td>
     <td><%= member.join_date %></td>
     <td><%= member.comment %></td>
-    <td><%= @member_status[member.status] %></td>
+    <td><%= @member_status[member.status.to_i] %></td>
     <td><%= link_to '詳細', member %></td>
     <td><%= link_to '編集', edit_member_path(member) %></td>
     <!--<td><%= link_to '削除', member, method: :delete, data: { confirm: '本当に削除してよい?' } %></td>-->

@@ -1,45 +1,57 @@
+<div class="page_title">
+    <h2>A.C.GARDY Schedules Detail</h2>
+</div>
+
+<div class="detail_main">
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Id:</b>
+  <b>ID:</b>
   <%= @schedule.id %>
 </p>
 
 <p>
-  <b>Kick date:</b>
-  <%= @schedule.kick_date %>
+  <b>Kick date (開催日):</b>
+  <%= @schedule.kick_date.strftime("%Y/%m/%d") %>
 </p>
 
 <p>
-  <b>Start time:</b>
-  <%= @schedule.start_time %>
+  <b>Start time (開始時刻):</b>
+  <%= @schedule.start_time.strftime("%H:%M") %>
 </p>
 
 <p>
-  <b>End time:</b>
-  <%= @schedule.end_time %>
+  <b>End time (終了時刻):</b>
+  <%= @schedule.end_time.strftime("%H:%M") %>
 </p>
 
 <p>
-  <b>Title:</b>
+  <b>Place (場所):</b>
+  <%= @schedule.place %>
+</p>
+
+<p>
+  <b>Title (タイトル):</b>
   <%= @schedule.title %>
 </p>
 
 <p>
-  <b>Contents:</b>
+  <b>Contents (内容):</b>
   <%= @schedule.contents %>
 </p>
 
 <p>
-  <b>Open flag:</b>
+  <b>Open flag (公開):</b>
   <%= @schedule.open_flag %>
 </p>
 
 <p>
-  <b>Register:</b>
+  <b>Register (登録者):</b>
   <%= @schedule.register %>
 </p>
 
 
-<%= link_to 'Edit', edit_schedule_path(@schedule) %> |
-<%= link_to 'Back', schedules_path %>
+<%= link_to '編集', edit_schedule_path(@schedule) %> |
+<%= link_to '一覧へ戻る', schedules_path %>
+</div>

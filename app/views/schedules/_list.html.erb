@@ -1,6 +1,6 @@
 <%- if @schedules %>
 <p>
-<table>
+<table class="simple_table">
   <tr>
     <th>開催日</th>
     <th>開始時刻</th>
@@ -8,7 +8,6 @@
     <th>場所</th>
     <th>タイトル</th>
     <th>内容</th>
-    <th>登録日時</th>
   </tr>
 
 <% @schedules.each do |schedule| %>
@@ -19,7 +18,7 @@
     <td><%= schedule.place %></td>
     <td><%= schedule.title %></td>
     <td><%= schedule.contents %></td>
-    <td><%= schedule.created_at.strftime("%Y/%m/%d %H:%M:%S") %></td>
+    <td><%= schedule.created_at.strftime("%Y/%m/%d %H:%M") %></td>
   </tr>
 <% end %>
 <% else%>
